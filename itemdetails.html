@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Item Details</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <style>
+    body { margin: 0; padding: 0; }
+    .item-image-placeholder { width: 100%; height: 300px; background-color: #ccc; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <!-- Navbar with Home Button -->
+  <nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <a class="navbar-brand" href="home.html">Home</a>
+  </nav>
+  
+  <div class="container mt-4">
+    <h1 class="mb-4">Item Details</h1>
+    <div class="row">
+      <!-- Item image section -->
+      <div class="col-md-8">
+        <div class="item-image-placeholder"></div>
+      </div>
+      <!-- Item description and Add to Cart section -->
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="itemDescription">Item Description</label>
+          <input type="text" class="form-control" id="itemDescription" placeholder="Item Description" />
+        </div>
+        <button class="btn btn-primary btn-block" data-product-id="1">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/item-details.js"></script>
+</body>
+</html>
+
