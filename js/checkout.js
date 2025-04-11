@@ -1,23 +1,54 @@
 // checkout.js
 document.addEventListener("DOMContentLoaded", function () {
-  // Check that we are on the checkout page (e.g., by title or other selectors)
-  if (document.title.indexOf("Checkout") !== -1) {
-    const checkoutForm = document.querySelector("form");
-    checkoutForm.addEventListener("submit", function (e) {
+  // Retrieve the cart items from localStorage, if none then use an empty array.
+  const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+  const summaryList = document.getElementById("summary-list");
+  const totalPriceElem = document.getElementById("total-price");
+  
+  let totalPrice = 0;
+  
+  // Ensure the order summary container exists.
+  if (!summaryList) {
+    console.error("Order summary list element not found.");
+    return;
+  }
+  
+  // For each item in the cart, create an entry in the order summary list.
+  cartItems.forEach(item => {
+    totalPrice += item.price;
+    
+    const listItem = document.createElement("li");
+    listItem.className = "list-group-item d-flex justify-content-between align-items-center";
+    listItem.textContent = item.name;
+    
+    const priceSpan = document.createElement("span");
+    priceSpan.textContent = `$${item.price}`;
+    
+    listItem.appendChild(priceSpan);
+    summaryList.appendChild(listItem);
+  });
+  
+  // Update the total price display.
+  if (totalPriceElem) {
+    totalPriceElem.textContent = totalPrice.toFixed(2);
+  }
+  
+  // Payment Form Submission: handle the form submission.
+  const paymentForm = document.getElementById("payment-form");
+  if (paymentForm) {
+    paymentForm.addEventListener("submit", function (e) {
       e.preventDefault();
-      const cardNumber = document.getElementById("cardNumber").value;
-      const expirationDate = document.getElementById("expirationDate").value;
-      const cvv = document.getElementById("cvv").value;
       
-      if (!cardNumber.trim() || !expirationDate.trim() || !cvv.trim()) {
-        alert("Please fill in all payment fields.");
-        return;
-      }
-      
+      // Add validation and processing as needed.
+      // For this demo, simply confirm the order.
       alert("Payment information submitted! Order confirmed.");
-      // Clear the cart after a successful checkout
+      
+      // Clear the cart data after successful checkout.
       localStorage.removeItem("cartItems");
-      window.location.href = "confirmation.html";  // Redirect to order confirmation
+      
+      // Redirect to an order confirmation page or back to home.
+      window.location.href = "confirmation.html"; // Update URL as needed
     });
   }
 });
+

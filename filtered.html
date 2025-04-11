@@ -2,163 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Filtered Results</title>
-  <!-- Bootstrap CSS (CDN) -->
-  <link
-    rel="stylesheet"
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-  />
+  <title>Filtered Products</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-    }
-    .card {
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    .card-body {
-      text-align: center;
-    }
-    .card-title {
-      margin-bottom: 15px;
-    }
-    .pagination-container {
-      display: flex;
-      justify-content: center;
-      margin: 20px 0;
-    }
+    body { margin: 0; padding: 0; background-color: #f8f9fa; }
   </style>
 </head>
 <body>
+  <!-- Navbar with Home, Log In, and Cart Links -->
+  <nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <a class="navbar-brand" href="home.html">Home</a>
+    <div class="ml-auto">
+      <a href="login.html" class="btn btn-outline-secondary mr-2">Log In</a>
+      <a href="cart.html" class="btn btn-outline-primary">Cart</a>
+    </div>
+  </nav>
+  
   <div class="container mt-4">
-    <h1 class="text-center mb-4">Filtered Results</h1>
-    
-    <!-- Items Grid -->
-    <div class="row">
-      <!-- Item 1 -->
-      <div class="col-md-3 mb-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Item 1</h5>
-            <button class="btn btn-primary mb-2">Add to Cart</button>
-            <button class="btn btn-secondary">View Details</button>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Item 2 -->
-      <div class="col-md-3 mb-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Item 2</h5>
-            <button class="btn btn-primary mb-2">Add to Cart</button>
-            <button class="btn btn-secondary">View Details</button>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Item 3 -->
-      <div class="col-md-3 mb-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Item 3</h5>
-            <button class="btn btn-primary mb-2">Add to Cart</button>
-            <button class="btn btn-secondary">View Details</button>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Item 4 -->
-      <div class="col-md-3 mb-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Item 4</h5>
-            <button class="btn btn-primary mb-2">Add to Cart</button>
-            <button class="btn btn-secondary">View Details</button>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Item 5 -->
-      <div class="col-md-3 mb-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Item 5</h5>
-            <button class="btn btn-primary mb-2">Add to Cart</button>
-            <button class="btn btn-secondary">View Details</button>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Item 6 -->
-      <div class="col-md-3 mb-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Item 6</h5>
-            <button class="btn btn-primary mb-2">Add to Cart</button>
-            <button class="btn btn-secondary">View Details</button>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Item 7 -->
-      <div class="col-md-3 mb-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Item 7</h5>
-            <button class="btn btn-primary mb-2">Add to Cart</button>
-            <button class="btn btn-secondary">View Details</button>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Item 8 -->
-      <div class="col-md-3 mb-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Item 8</h5>
-            <button class="btn btn-primary mb-2">Add to Cart</button>
-            <button class="btn btn-secondary">View Details</button>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Item 9 -->
-      <div class="col-md-3 mb-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Item 9</h5>
-            <button class="btn btn-primary mb-2">Add to Cart</button>
-            <button class="btn btn-secondary">View Details</button>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Item 10 -->
-      <div class="col-md-3 mb-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Item 10</h5>
-            <button class="btn btn-primary mb-2">Add to Cart</button>
-            <button class="btn btn-secondary">View Details</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Pagination Buttons -->
-    <div class="pagination-container">
-      <button class="btn btn-outline-primary mr-2">Previous</button>
-      <button class="btn btn-outline-primary mr-2">1</button>
-      <button class="btn btn-outline-primary mr-2">2</button>
-      <button class="btn btn-outline-primary">Next</button>
-    </div>
+    <h1 class="text-center mb-4">Filtered Products</h1>
+    <!-- Container for filtered products -->
+    <div id="filtered-items" class="row"></div>
   </div>
-
-  <!-- Optional Bootstrap JS -->
+  
+  <!-- jQuery, Popper.js, Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- Global definitions and filtered page functionality -->
+  <script src="js/main.js"></script>
+  <script src="js/filtered.js"></script>
 </body>
 </html>
+

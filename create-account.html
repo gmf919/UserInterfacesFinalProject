@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Create Account</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <style>
+    body { margin: 0; padding: 0; height: 100vh; display: flex; align-items: center; justify-content: center; background-color: #f8f9fa; }
+    .create-account-container { max-width: 400px; width: 100%; padding: 20px; background: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.1); border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <!-- Navbar with Home Button -->
+  <nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <a class="navbar-brand" href="home.html">Home</a>
+  </nav>
+  
+  <div class="container create-account-container">
+    <h1 class="text-center mb-4">Create Account</h1>
+    <form>
+      <div class="form-group">
+        <label for="emailInput">Email</label>
+        <input type="email" class="form-control" id="emailInput" placeholder="Email" required />
+      </div>
+      <div class="form-group">
+        <label for="passwordInput">Password</label>
+        <input type="password" class="form-control" id="passwordInput" placeholder="Password" required />
+      </div>
+      <div class="form-group">
+        <label for="confirmPasswordInput">Confirm Password</label>
+        <input type="password" class="form-control" id="confirmPasswordInput" placeholder="Confirm Password" required />
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+    </form>
+  </div>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="js/login.js"></script> <!-- or a dedicated createAccount.js if separated -->
+</body>
+</html>
+

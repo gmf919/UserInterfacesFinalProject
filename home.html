@@ -9,28 +9,31 @@
     body { margin: 0; padding: 0; background-color: #f8f9fa; }
     .search-container { max-width: 500px; margin: 40px auto 0; }
     .popular-section { margin-top: 40px; }
-    .popular-item { background-color: #fff; border: 1px solid #ddd; border-radius: 4px; text-align: center; padding: 1rem; }
   </style>
 </head>
 <body>
-  <!-- Navbar with Home Button -->
+  <!-- Navbar with Home, Log In, and Cart Links -->
   <nav class="navbar navbar-expand-sm navbar-light bg-light">
     <a class="navbar-brand" href="home.html">Home</a>
+    <div class="ml-auto">
+      <a href="login.html" class="btn btn-outline-secondary mr-2">Log In</a>
+      <a href="cart.html" class="btn btn-outline-primary">Cart</a>
+    </div>
   </nav>
-  
+
   <div class="container">
     <h1 class="text-center mt-4">Home</h1>
-    
+
     <!-- Search & Filter Form -->
     <div class="search-container">
-      <form>
+      <form id="search-form">
         <div class="form-group">
           <label for="searchInput">Search Bar</label>
-          <input type="text" class="form-control" id="searchInput" placeholder="Search Bar" />
+          <input type="text" class="form-control" id="searchInput" placeholder="Enter product name" />
         </div>
         <div class="form-group">
           <label for="filterInput">Filter Options</label>
-          <input type="text" class="form-control" id="filterInput" placeholder="Filter Options" />
+          <input type="text" class="form-control" id="filterInput" placeholder="(Optional) Filter Options" />
         </div>
         <button type="submit" class="btn btn-primary btn-block">Apply Filters</button>
       </form>
@@ -40,15 +43,16 @@
     <div class="popular-section">
       <h4>Popular & Recommended</h4>
       <div id="popular-items" class="row">
-        <!-- Dynamic popular items will be injected here -->
+        <!-- Dynamic popular items will be injected here by home.js -->
       </div>
     </div>
   </div>
-  
-  <!-- Bootstrap JS and dependencies -->
+
+  <!-- jQuery, Popper.js, Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- Global definitions and home functionality scripts -->
   <script src="js/main.js"></script>
   <script src="js/home.js"></script>
 </body>

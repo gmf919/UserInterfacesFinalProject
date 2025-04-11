@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="cart.js" server="ec2-18-116-62-232.us-east-2.compute.amazonaws.com//var/www/html/" local="133888122611542204" remote="133888124080000000" Dst="2" />
-<file name="checkout.js" server="ec2-18-116-62-232.us-east-2.compute.amazonaws.com//var/www/html/" local="133888122611318705" remote="133888124080000000" Dst="2" />
-<file name="home.js" server="ec2-18-116-62-232.us-east-2.compute.amazonaws.com//var/www/html/" local="133888126886032968" remote="133888126930000000" Dst="2" />
-<file name="item-details.js" server="ec2-18-116-62-232.us-east-2.compute.amazonaws.com//var/www/html/" local="133888122611115109" remote="133888124090000000" Dst="2" />
-<file name="login.js" server="ec2-18-116-62-232.us-east-2.compute.amazonaws.com//var/www/html/" local="133888122610916407" remote="133888124090000000" Dst="2" />
-<file name="main.js" server="ec2-18-116-62-232.us-east-2.compute.amazonaws.com//var/www/html/" local="133888126886360770" remote="133888126930000000" Dst="2" />
+<file name="cart.js" server="ec2-18-116-62-232.us-east-2.compute.amazonaws.com//var/www/html/" local="133888147873640797" remote="133888148110000000" Dst="2" />
+<file name="checkout.js" server="ec2-18-116-62-232.us-east-2.compute.amazonaws.com//var/www/html/" local="133888150117470793" remote="133888150350000000" Dst="2" />
+<file name="home.js" server="ec2-18-116-62-232.us-east-2.compute.amazonaws.com//var/www/html/" local="133888155618142238" remote="133888155740000000" Dst="2" />
+<file name="item-details.js" server="ec2-18-116-62-232.us-east-2.compute.amazonaws.com//var/www/html/" local="133888122611115109" remote="133888141550000000" Dst="2" />
+<file name="login.js" server="ec2-18-116-62-232.us-east-2.compute.amazonaws.com//var/www/html/" local="133888122610916407" remote="133888141550000000" Dst="2" />
+<file name="main.js" server="ec2-18-116-62-232.us-east-2.compute.amazonaws.com//var/www/html/" local="133888148066955005" remote="133888148120000000" Dst="2" />
+<file name="filtered.js" server="ec2-18-116-62-232.us-east-2.compute.amazonaws.com//var/www/html/" local="133888155617590944" remote="133888155720000000" Dst="2" />
 </dwsync>
